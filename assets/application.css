@@ -3,26 +3,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body:before {
-  content: '';
-  display: inline-block;
-  background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, grey 0, grey 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, grey 8.5298%, grey 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, grey 17.05961%, grey 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, grey 25.58941%, grey 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, grey 34.11922%, grey 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, grey 42.64902%, grey 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, grey 51.17883%, grey 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, grey 59.70863%, grey 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, grey 68.23843%, grey 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, grey 76.76824%, grey 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, grey 85.29804%, grey 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, grey 93.82785%, grey 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, grey 0, grey 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, grey 8.5298%, grey 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, grey 17.05961%, grey 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, grey 25.58941%, grey 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, grey 34.11922%, grey 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, grey 42.64902%, grey 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, grey 51.17883%, grey 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, grey 59.70863%, grey 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, grey 68.23843%, grey 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, grey 76.76824%, grey 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, grey 85.29804%, grey 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, grey 93.82785%, grey 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, grey 0, grey 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, grey 8.5298%, grey 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, grey 17.05961%, grey 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, grey 25.58941%, grey 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, grey 34.11922%, grey 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, grey 42.64902%, grey 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, grey 51.17883%, grey 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, grey 59.70863%, grey 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, grey 68.23843%, grey 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, grey 76.76824%, grey 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, grey 85.29804%, grey 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, grey 93.82785%, grey 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, grey 0, grey 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, grey 8.5298%, grey 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, grey 17.05961%, grey 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, grey 25.58941%, grey 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, grey 34.11922%, grey 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, grey 42.64902%, grey 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, grey 51.17883%, grey 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, grey 59.70863%, grey 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, grey 68.23843%, grey 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, grey 76.76824%, grey 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, grey 85.29804%, grey 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, grey 93.82785%, grey 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, grey 0, grey 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, grey 8.5298%, grey 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, grey 17.05961%, grey 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, grey 25.58941%, grey 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, grey 34.11922%, grey 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, grey 42.64902%, grey 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, grey 51.17883%, grey 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, grey 59.70863%, grey 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, grey 68.23843%, grey 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, grey 76.76824%, grey 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, grey 85.29804%, grey 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, grey 93.82785%, grey 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, grey 0, grey 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, grey 8.5298%, grey 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, grey 17.05961%, grey 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, grey 25.58941%, grey 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, grey 34.11922%, grey 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, grey 42.64902%, grey 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, grey 51.17883%, grey 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, grey 59.70863%, grey 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, grey 68.23843%, grey 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, grey 76.76824%, grey 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, grey 85.29804%, grey 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, grey 93.82785%, grey 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 68em;
-  opacity: 0.1;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  pointer-events: none;
-  z-index: 9999; }
-
 body {
   margin: auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -71,8 +51,20 @@ nav {
       margin-right: 0; }
 
 .intro {
-  background-color: #1a1718;
+  background-color: #8b908b;
   color: #fff; }
+  .intro .circle {
+    margin-top: 20px;
+    width: 450px;
+    height: 450px;
+    background: #231f20;
+    -moz-border-radius: 225px;
+    -webkit-border-radius: 225px;
+    background-image: url("images/logo.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat; }
+  .intro h1 {
+    text-align: center; }
 
 .portfolio .side {
   display: block;
@@ -92,3 +84,8 @@ nav {
 .about {
   background-color: #5f2490;
   color: #fff; }
+
+.center {
+  width: 50%;
+  margin: 0 auto;
+  vertical-align: middle; }

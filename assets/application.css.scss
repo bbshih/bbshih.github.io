@@ -1,8 +1,8 @@
 @import 'bourbon/bourbon';
-$visual-grid: true;
-$visual-grid-color: grey;
-$visual-grid-index: front;
-$visual-grid-opacity: 0.1;
+// $visual-grid: true;
+// $visual-grid-color: grey;
+// $visual-grid-index: front;
+// $visual-grid-opacity: 0.1;
 @import 'neat/neat';
 
 $primaryActionColor: #256a90;
@@ -57,8 +57,24 @@ nav {
 }
 
 .intro {
-  background-color: #1a1718;
-  color: #fff;
+  background-color: #8b908b;
+  color: #fff;;
+  .circle {
+      $circleSize: 450px;
+      margin-top: 20px;
+      width: $circleSize;
+      height: $circleSize;
+      background: #231f20;
+      -moz-border-radius: $circleSize / 2;
+      -webkit-border-radius: $circleSize / 2;
+      background-image: url("images/logo.png");
+      background-position:50% 50%;
+      background-repeat:no-repeat;    
+  }
+
+  h1 {
+    text-align: center;
+  }
 }
 
 .portfolio {
@@ -74,4 +90,11 @@ nav {
 .about {
   background-color: #5f2490;
   color: #fff;
+}
+
+// Useful
+.center {
+  width: 50%;
+  margin: 0 auto;
+  vertical-align: middle;
 }
