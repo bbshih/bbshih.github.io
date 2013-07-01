@@ -1,0 +1,54 @@
+@import '../bourbon/bourbon';
+@import '../neat/neat';
+
+// $padding: 1em;
+.normal { 
+
+  font-family: "adelle",serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5em;
+}
+
+body {
+  margin: auto;
+}
+
+div.container {
+  @include outer-container;
+  $visual-grid: true;
+}
+
+nav {
+  position: absolute;
+  top: 200px;
+  z-index: 100;
+  background-color: #dbd8b4;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+
+$sectionHeight: 500px;
+
+.start {
+  @include span-columns (12);
+  background-color: #000;
+  height: $sectionHeight;
+  color: #fff;
+  padding: 0;
+  h1 { margin: 0}
+}
+
+.portfolio {
+  height: $sectionHeight;
+  $visual-grid: true;
+}
+
+.side {
+  @include span-columns(4);
+}
+
+.main {
+  @include span-columns(8);
+}
