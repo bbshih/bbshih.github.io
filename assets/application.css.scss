@@ -1,54 +1,77 @@
-@import '../bourbon/bourbon';
-@import '../neat/neat';
+@import 'bourbon/bourbon';
+$visual-grid: true;
+$visual-grid-color: grey;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
+@import 'neat/neat';
 
-// $padding: 1em;
-.normal { 
+$primaryActionColor: #256a90;
 
-  font-family: "adelle",serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 5em;
-}
+$sectionHeight: 800px;
 
 body {
   margin: auto;
-}
-
-div.container {
-  @include outer-container;
-  $visual-grid: true;
+  font-family: $helvetica;
 }
 
 nav {
-  position: absolute;
-  top: 200px;
+  position: fixed;
+  top: $sectionHeight - 100;
   z-index: 100;
   background-color: #dbd8b4;
   width: 100%;
-  padding: 1em;
   text-align: center;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a:link {
+    font-size: 2em;
+    font-weight: bold;
+    color: $primaryActionColor;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:visited {
+    color: $primaryActionColor;
+  }
 }
 
-$sectionHeight: 500px;
-
-.start {
-  @include span-columns (12);
-  background-color: #000;
+.content {
+  @include outer-container;
   height: $sectionHeight;
+
+  h1 {
+    @include span-columns (12);
+    font-size: 5em;
+    margin: 0px;
+  } 
+}
+
+.intro {
+  background-color: #1a1718;
   color: #fff;
-  padding: 0;
-  h1 { margin: 0}
 }
 
 .portfolio {
-  height: $sectionHeight;
-  $visual-grid: true;
+  .side {
+    @include span-columns(4);
+  }
+
+  .main {
+    @include span-columns(8);
+  }
 }
 
-.side {
-  @include span-columns(4);
-}
-
-.main {
-  @include span-columns(8);
+.about {
+  background-color: #5f2490;
+  color: #fff;
 }
