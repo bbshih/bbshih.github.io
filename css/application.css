@@ -8,10 +8,20 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 nav {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   background-color: #dbd8b4;
+  opacity: 0.8;
   width: 100%;
   padding: 0 20px; }
+  nav:before, nav:after {
+    content: " ";
+    display: table; }
+  nav:after {
+    clear: both; }
   nav ul {
     padding: 1em 0;
     margin: 0; }

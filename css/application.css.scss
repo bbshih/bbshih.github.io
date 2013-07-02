@@ -15,8 +15,10 @@ body {
 }
 
 nav {
+  @include outer-container;
   text-align: center;
   background-color: #dbd8b4;
+  opacity: 0.8;
   width: 100%;
   padding: 0 20px;
 

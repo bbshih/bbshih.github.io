@@ -9,13 +9,13 @@ function moveScroller() {
                 position: "fixed",
                 top: "0px"
             });
-            $("#portfolio").css("padding-top", navHeight);
+            $("#portfolio").css("margin-top", navHeight);
         } else {
             if(st <= ot) {
                 s.css({
                     position: "relative",
                 });
-                $("#portfolio").css("padding-top", 0);
+                $("#portfolio").css("margin-top", 0);
             }
         }
     };
