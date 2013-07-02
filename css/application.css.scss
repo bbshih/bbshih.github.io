@@ -7,7 +7,7 @@
 
 $primaryActionColor: #256a90;
 
-$sectionHeight: 800px;
+$sectionHeight: 600px;
 
 body {
   margin: auto;
@@ -15,11 +15,7 @@ body {
 }
 
 nav {
-  position: fixed;
-  margin-top: $sectionHeight - 100px;
-  z-index: 100;
   text-align: center;
-
   background-color: #dbd8b4;
   width: 100%;
   padding: 0 20px;

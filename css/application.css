@@ -8,9 +8,6 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 nav {
-  position: fixed;
-  margin-top: 700px;
-  z-index: 100;
   text-align: center;
   background-color: #dbd8b4;
   width: 100%;
@@ -36,7 +33,7 @@ nav {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  height: 800px; }
+  height: 600px; }
   .content:before, .content:after {
     content: " ";
     display: table; }

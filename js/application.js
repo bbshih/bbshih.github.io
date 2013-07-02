@@ -1,19 +1,21 @@
 function moveScroller() {
     var move = function() {
-        var st = $(window).scrollTop();
-        var ot = $("#intro").offset().top;
         var s = $("nav");
+        var navHeight = s.height();
+        var st = $(window).scrollTop();
+        var ot = $("#portfolio").offset().top - navHeight;
         if(st > ot) {
             s.css({
                 position: "fixed",
-                top: "8px"
+                top: "0px"
             });
+            $("#portfolio").css("padding-top", navHeight);
         } else {
             if(st <= ot) {
                 s.css({
                     position: "relative",
-                    top: "700px" // $sectionHeight - 100 in scss file
                 });
+                $("#portfolio").css("padding-top", 0);
             }
         }
     };
