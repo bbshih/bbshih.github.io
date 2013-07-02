@@ -1,0 +1,89 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+nav {
+  position: fixed;
+  margin-top: 700px;
+  z-index: 100;
+  text-align: center;
+  background-color: #dbd8b4;
+  width: 100%;
+  padding: 0 20px; }
+  nav ul {
+    padding: 1em 0;
+    margin: 0; }
+  nav li {
+    display: inline-block; }
+  nav a:link {
+    font-size: 2em;
+    font-weight: bold;
+    color: #256a90;
+    text-transform: uppercase;
+    text-decoration: none; }
+  nav a:hover {
+    text-decoration: underline; }
+  nav a:visited {
+    color: #256a90; }
+
+.content {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 800px; }
+  .content:before, .content:after {
+    content: " ";
+    display: table; }
+  .content:after {
+    clear: both; }
+  .content h1 {
+    font-size: 5em;
+    margin: 0px; }
+
+.side {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .side:last-child {
+    margin-right: 0; }
+
+.main {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .main:last-child {
+    margin-right: 0; }
+
+#intro {
+  background-color: #8b908b;
+  color: #fff; }
+  #intro .circle {
+    margin-top: 20px;
+    width: 225px;
+    height: 225px;
+    background: #231f20;
+    -moz-border-radius: 112.5px;
+    -webkit-border-radius: 112.5px;
+    background-image: url("../images/logo.png");
+    background-size: 154px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; }
+  #intro #title {
+    font-size: 5em; }
+
+#about {
+  background-color: #5f2490;
+  color: #fff; }
+
+.center {
+  width: 50%;
+  margin: 0 auto;
+  vertical-align: middle; }

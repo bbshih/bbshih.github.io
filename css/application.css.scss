@@ -1,0 +1,107 @@
+@import 'bourbon/bourbon';
+// $visual-grid: true;
+// $visual-grid-color: grey;
+// $visual-grid-index: front;
+// $visual-grid-opacity: 0.1;
+@import 'neat/neat';
+
+$primaryActionColor: #256a90;
+
+$sectionHeight: 800px;
+
+body {
+  margin: auto;
+  font-family: $helvetica;
+}
+
+nav {
+  position: fixed;
+  margin-top: $sectionHeight - 100px;
+  z-index: 100;
+  text-align: center;
+
+  background-color: #dbd8b4;
+  width: 100%;
+  padding: 0 20px;
+
+  ul {
+    padding: 1em 0;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a:link {
+    font-size: 2em;
+    font-weight: bold;
+    color: $primaryActionColor;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:visited {
+    color: $primaryActionColor;
+  }
+}
+
+.content {
+  @include outer-container;
+  height: $sectionHeight;
+
+  h1 {
+    font-size: 5em;
+    margin: 0px;
+  } 
+}
+
+.side {
+  @include span-columns(4);
+}
+
+.main {
+  @include span-columns(8);
+}
+
+#intro {
+  background-color: #8b908b;
+  color: #fff;
+
+  .circle {
+      $scale: .5;
+      $circleSize: 450px * $scale;
+      $imageSize: 308px *  $scale;
+      margin-top: 20px;
+      width: $circleSize;
+      height: $circleSize;
+      background: #231f20;
+      -moz-border-radius: $circleSize / 2;
+      -webkit-border-radius: $circleSize / 2;
+      background-image: url("../images/logo.png");
+      background-size: $imageSize;
+      background-position:50% 50%;
+      background-repeat:no-repeat;    
+  }
+  #title {
+    font-size: 5em;
+  }
+}
+
+#portfolio {
+
+}
+
+#about {
+  background-color: #5f2490;
+  color: #fff;
+}
+
+// Useful
+.center {
+  width: 50%;
+  margin: 0 auto;
+  vertical-align: middle;
+}
