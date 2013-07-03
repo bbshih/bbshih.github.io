@@ -15,15 +15,16 @@ body {
 }
 
 nav {
-  @include outer-container;
-  text-align: center;
+  padding: 5px 0;
   background-color: #dbd8b4;
   opacity: 0.8;
   width: 100%;
-  padding: 0 20px;
 
+  .nav {
+    @include outer-container;
+    text-align: center;
+  }
   ul {
-    padding: 1em 0;
     margin: 0;
   }
 
@@ -43,6 +44,20 @@ nav {
   }
   a:visited {
     color: $primaryActionColor;
+  }
+
+  #navPortfolio {
+    @include span-columns(4);
+  }
+#navPortfolio:hover {
+  opacity: 1;
+}
+
+  #navAbout {
+    @include span-columns(4);
+  }
+  #navBlog {
+    @include span-columns(4);
   }
 }
 

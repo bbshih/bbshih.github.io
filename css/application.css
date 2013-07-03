@@ -8,22 +8,22 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 nav {
-  *zoom: 1;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  padding: 5px 0;
   background-color: #dbd8b4;
   opacity: 0.8;
-  width: 100%;
-  padding: 0 20px; }
-  nav:before, nav:after {
-    content: " ";
-    display: table; }
-  nav:after {
-    clear: both; }
+  width: 100%; }
+  nav .nav {
+    *zoom: 1;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+    nav .nav:before, nav .nav:after {
+      content: " ";
+      display: table; }
+    nav .nav:after {
+      clear: both; }
   nav ul {
-    padding: 1em 0;
     margin: 0; }
   nav li {
     display: inline-block; }
@@ -37,6 +37,29 @@ nav {
     text-decoration: underline; }
   nav a:visited {
     color: #256a90; }
+  nav #navPortfolio {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    nav #navPortfolio:last-child {
+      margin-right: 0; }
+  nav #navPortfolio:hover {
+    opacity: 1; }
+  nav #navAbout {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    nav #navAbout:last-child {
+      margin-right: 0; }
+  nav #navBlog {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    nav #navBlog:last-child {
+      margin-right: 0; }
 
 .content {
   *zoom: 1;
