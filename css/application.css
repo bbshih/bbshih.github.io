@@ -1,7 +1,13 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  font-size: 3em; }
 
 body {
   margin: auto;
@@ -23,10 +29,6 @@ nav {
       display: table; }
     nav .nav:after {
       clear: both; }
-  nav ul {
-    margin: 0; }
-  nav li {
-    display: inline-block; }
   nav a:link {
     font-size: 2em;
     font-weight: bold;
@@ -44,8 +46,6 @@ nav {
     width: 31.76157%; }
     nav #navPortfolio:last-child {
       margin-right: 0; }
-  nav #navPortfolio:hover {
-    opacity: 1; }
   nav #navAbout {
     display: block;
     float: left;
@@ -75,19 +75,22 @@ nav {
   .content h1 {
     font-size: 5em;
     margin: 0px; }
+  .content h2 {
+    font-size: 3em;
+    margin: 0px; }
 
 #intro {
   background-color: #8b908b;
-  color: #fff; }
+  color: white; }
   #intro .circle {
     margin-top: 20px;
-    width: 225px;
-    height: 225px;
+    width: 90px;
+    height: 90px;
     background: #231f20;
-    -moz-border-radius: 112.5px;
-    -webkit-border-radius: 112.5px;
+    -moz-border-radius: 45px;
+    -webkit-border-radius: 45px;
     background-image: url("../images/logo.png");
-    background-size: 154px;
+    background-size: 61.6px;
     background-position: 50% 50%;
     background-repeat: no-repeat; }
   #intro img {
@@ -124,9 +127,24 @@ nav {
 
 #about {
   background-color: #5f2490;
-  color: #fff; }
+  color: white; }
 
 .center {
   width: 50%;
   margin: 0 auto;
   vertical-align: middle; }
+
+ul.inlineList {
+  margin: 0;
+  padding: 0;
+  display: inline; }
+  ul.inlineList li {
+    display: inline; }
+
+.socialIcons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px 0 0; }
+
+.socialIcons a:hover {
+  color: #256a90; }

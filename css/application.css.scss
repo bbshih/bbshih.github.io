@@ -5,7 +5,16 @@
 // $visual-grid-opacity: 0.1;
 @import 'neat/neat';
 
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  font-size: 3em;
+}
+
 $primaryActionColor: #256a90;
+$primaryColor: #ffffff;
 
 $sectionHeight: 600px;
 
@@ -23,13 +32,6 @@ nav {
   .nav {
     @include outer-container;
     text-align: center;
-  }
-  ul {
-    margin: 0;
-  }
-
-  li {
-    display: inline-block;
   }
 
   a:link {
@@ -49,9 +51,6 @@ nav {
   #navPortfolio {
     @include span-columns(4);
   }
-#navPortfolio:hover {
-  opacity: 1;
-}
 
   #navAbout {
     @include span-columns(4);
@@ -69,14 +68,19 @@ nav {
     font-size: 5em;
     margin: 0px;
   } 
+
+  h2 {
+    font-size: 3em;
+    margin: 0px;
+  }
 }
 
 #intro {
   background-color: #8b908b;
-  color: #fff;
+  color: $primaryColor;
 
   .circle {
-      $scale: .5;
+      $scale: .2;
       $circleSize: 450px * $scale;
       $imageSize: 308px *  $scale;
       margin-top: 20px;
@@ -116,7 +120,7 @@ nav {
 
 #about {
   background-color: #5f2490;
-  color: #fff;
+  color: $primaryColor;
 }
 
 // Useful
@@ -125,3 +129,22 @@ nav {
   margin: 0 auto;
   vertical-align: middle;
 }
+
+ul.inlineList {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  li {
+    display: inline;
+  }
+}
+.socialIcons a {
+  color: $primaryColor;
+  text-decoration: none;
+  margin: 0 10px 0 0;
+}
+
+.socialIcons a:hover {
+    color: $primaryActionColor;
+}
+
