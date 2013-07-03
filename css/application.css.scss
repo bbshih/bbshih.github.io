@@ -71,14 +71,6 @@ nav {
   } 
 }
 
-.side {
-  @include span-columns(4);
-}
-
-.main {
-  @include span-columns(8);
-}
-
 #intro {
   background-color: #8b908b;
   color: #fff;
@@ -98,12 +90,27 @@ nav {
       background-position:50% 50%;
       background-repeat:no-repeat;    
   }
-  #title {
-    font-size: 5em;
+  img {
+    vertical-align: bottom;
   }
+  .side {
+    @include span-columns(5);
+  }
+
+  .main {
+    @include span-columns(7);
+  }
+
 }
 
 #portfolio {
+  .side {
+    @include span-columns(4);
+  }
+
+  .main {
+    @include span-columns(8);
+  }
 
 }
 

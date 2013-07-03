@@ -76,22 +76,6 @@ nav {
     font-size: 5em;
     margin: 0px; }
 
-.side {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .side:last-child {
-    margin-right: 0; }
-
-.main {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .main:last-child {
-    margin-right: 0; }
-
 #intro {
   background-color: #8b908b;
   color: #fff; }
@@ -106,8 +90,37 @@ nav {
     background-size: 154px;
     background-position: 50% 50%;
     background-repeat: no-repeat; }
-  #intro #title {
-    font-size: 5em; }
+  #intro img {
+    vertical-align: bottom; }
+  #intro .side {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 40.29137%; }
+    #intro .side:last-child {
+      margin-right: 0; }
+  #intro .main {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 57.35098%; }
+    #intro .main:last-child {
+      margin-right: 0; }
+
+#portfolio .side {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  #portfolio .side:last-child {
+    margin-right: 0; }
+#portfolio .main {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  #portfolio .main:last-child {
+    margin-right: 0; }
 
 #about {
   background-color: #5f2490;
