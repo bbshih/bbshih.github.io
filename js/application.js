@@ -22,3 +22,14 @@ function moveScroller() {
     $(window).scroll(move);
     move();
 }
+
+$(function() {
+  moveScroller();
+});
+
+$(document).ready(function() {  
+    $("a#pAF").click(function (e) {
+        e.preventDefault();
+        $("p#mainTitle").fadeToggle("slow", "linear");
+    });
+});

@@ -9,60 +9,49 @@
 
 
 </head>
-<body>
-  <script type="text/javascript"> 
-    $(function() {
-      moveScroller();
-    });
-  </script> 
-  
-  <section id="intro">
-    <div class="content">
-      <div class="side">
-        <!-- <div class="circle"></div> -->
-        <h1>Billy Shih</h1>
-        <h2>Rails + iOS Developer</h2>
-        <div class="socialIcons">
-          <a href="http://github.com/bbshih" class="fontawesome-github"></a>
-          <a href="http://linkedin.com/in/bshih" class="fontawesome-linkedin-sign"></a>
-          <a href="http://twitter.com/tobillys" class="fontawesome-twitter"></a>
-        </div>
-    </div>
-      <div class="main"><img src="images/iphone.png" style="height: 540px; margin: 20px;">
-      </div>
-      
-      
-      
-
-
-        <!-- <img src="images/ruby_logo.png" alt="Ruby" style="height:100px;">
-        <img src="images/rails_logo.png" alt="Rails" style="height:100px;">
-        <img src="images/xcode_logo.png" alt="iOS xcode" style="height:100px;"> -->
-      
+<body>  
+  <section id="intro" class="content">
+    <!-- <div class="circle"></div> -->
+    <h1>Billy Shih</h1>
+    <h2>Ruby on Rails <br> iOS Developer</h2>
+    <div class="socialIcons">
+      <a href="http://github.com/bbshih" class="fontawesome-github"></a>
+      <a href="http://linkedin.com/in/bshih" class="fontawesome-linkedin-sign"></a>
+      <a href="http://twitter.com/tobillys" class="fontawesome-twitter"></a>
     </div>
   </section>
 
   <nav>
     <div class="nav">
       <ul class="inlineList">
-        <li id="navPortfolio"><a href="#">Portfolio</a></li>
-        <li id="navAbout"><a href="#">About</a></li>
+        <li id="navPortfolio"><a href="#portfolio">Portfolio</a></li>
+        <li id="navAbout"><a href="#about">About</a></li>
         <li id="navBlog"><a href="#">Blog</a></li>
       </ul>
     </div>
   </nav> 
 
-  <section id="portfolio" class="content">
-    <div class="side">
-      <h1>Portfolio</h1>
-    </div>
-    <div class="main">
-      <h1>Main Content</h1>
-    </div>
-  </section>
-  <section id="about">
+  <section id="portfolio">
     <div class="content">
-      <h1>About</h1>
+      <h1>Portfolio</h1>
+      <div class="side">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading">Projects</a>
+            <ul>
+                <li><a href="#" id="pAF">AppFunnel</a></li>
+                <li><a href="#" id="pCF">Corgi Fetch</a></li>
+                <li><a href="#" id="pTJD">t+j designs</a></li>
+            </ul>
+        </div>
+      </div>
+      <div id="pContent" class="main">
+        <p id="mainTitle">Main Content</p>
+      </div>
+    </section>
+    <section id="about">
+      <div class="content">
+        <h1>About</h1>
+    </div>
   </div>
   </section>
 </body>

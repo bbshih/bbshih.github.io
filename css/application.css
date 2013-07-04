@@ -11,12 +11,13 @@
 
 body {
   margin: auto;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #000000; }
 
 nav {
   padding: 5px 0;
-  background-color: #dbd8b4;
-  opacity: 0.8;
+  background-color: #eee;
+  opacity: 0.9;
   width: 100%; }
   nav .nav {
     *zoom: 1;
@@ -66,6 +67,7 @@ nav {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+  padding: 2.35765%;
   height: 600px; }
   .content:before, .content:after {
     content: " ";
@@ -80,8 +82,14 @@ nav {
     margin: 0px; }
 
 #intro {
-  background-color: #8b908b;
-  color: white; }
+  height: 100%;
+  text-shadow: 0px 3px 3px #333;
+  background-color: #000000;
+  background-image: url("../images/seattle.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  color: #fff; }
   #intro .circle {
     margin-top: 20px;
     width: 90px;
@@ -95,35 +103,23 @@ nav {
     background-repeat: no-repeat; }
   #intro img {
     vertical-align: bottom; }
-  #intro .side {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 40.29137%; }
-    #intro .side:last-child {
-      margin-right: 0; }
-  #intro .main {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 57.35098%; }
-    #intro .main:last-child {
-      margin-right: 0; }
 
-#portfolio .side {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  #portfolio .side:last-child {
-    margin-right: 0; }
-#portfolio .main {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  #portfolio .main:last-child {
-    margin-right: 0; }
+#portfolio {
+  background-color: #ffffff; }
+  #portfolio .side {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    #portfolio .side:last-child {
+      margin-right: 0; }
+  #portfolio .main {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    #portfolio .main:last-child {
+      margin-right: 0; }
 
 #about {
   background-color: #5f2490;
