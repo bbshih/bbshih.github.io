@@ -1,8 +1,10 @@
+
 @import 'bourbon/bourbon';
 // $visual-grid: true;
 // $visual-grid-color: grey;
 // $visual-grid-index: front;
 // $visual-grid-opacity: 0.1;
+
 @import 'neat/neat';
 
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
@@ -13,22 +15,24 @@
   font-size: 3em;
 }
 
-$primaryActionColor: #256a90;
+$primaryActionColor: #385194;
 $primaryColor: #ffffff;
+$clearPlane:rgba(60, 100, 200, 0.3);
 
 $sectionHeight: 600px;
 
 body {
   margin: auto;
   font-family: $helvetica;
-  background-color: #000000;
+  background-color: #070d0b;
 }
 
 nav {
   padding: 5px 0;
-  background-color: #eee;
+  background-color: #333;
   opacity: 0.9;
   width: 100%;
+  z-index: 1000;
 
   .nav {
     @include outer-container;
@@ -38,7 +42,7 @@ nav {
   a:link {
     font-size: 2em;
     font-weight: bold;
-    color: $primaryActionColor;
+    color: #fff;
     text-transform: uppercase;
     text-decoration: none;
   }
@@ -46,7 +50,7 @@ nav {
     text-decoration: underline;
   }
   a:visited {
-    color: $primaryActionColor;
+    color: #fff;
   }
 
   #navPortfolio {
@@ -63,7 +67,6 @@ nav {
 
 .content {
   @include outer-container;
-  @include pad();
   height: $sectionHeight;
 
   h1 {
@@ -78,48 +81,68 @@ nav {
 }
 
 #intro {
-  height: 100%;
-  
+  height: 800px;
+  position: relative;
   text-shadow: 0px 3px 3px #333;
 
   background-color: #000000;
-  background-image: url("../images/seattle.jpg");
-  background-repeat:no-repeat;    
+  background-image: url("../images/seattle3.jpg");
+  background-repeat:no-repeat;   
   background-position:50% 50%;
   background-size: cover;
   color: #fff;
+  text-align: right;
 
-  .circle {
-      $scale: .2;
-      $circleSize: 450px * $scale;
-      $imageSize: 308px *  $scale;
-      margin-top: 20px;
-      width: $circleSize;
-      height: $circleSize;
-      background: #231f20;
-      -moz-border-radius: $circleSize / 2;
-      -webkit-border-radius: $circleSize / 2;
-      background-image: url("../images/logo.png");
-      background-size: $imageSize;
-      background-position:50% 50%;
-      background-repeat:no-repeat;    
+  .text {
+    position: absolute; 
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    background-color: $clearPlane;
+    border-radius: 3px;
+    padding: 20px;
   }
-  img {
-    vertical-align: bottom;
-  }
+
 }
 
 #portfolio {
 
   background-color: #ffffff;
-  .side {
-    @include span-columns(3);
-  }
+  li.portfolioItem {
+    @include span-columns(4);
+    @include omega(3n);
+    height: 150px;
+    
+    color: #000;
+    text-shadow: 0px 2px 1px #fff;
 
-  .main {
-    @include span-columns(9);
-  }
+    background-color: #333;
+    background-repeat:no-repeat;
+    background-size: cover;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 3px;
 
+    .text {
+      position: absolute;
+      bottom: 0;
+      background-color: darken($clearPlane, 20%);
+      width: 100%;
+      padding: 5px;
+    }
+  }
+}
+
+#appFunnel {
+  background-image: url("../images/appfunnel.png");
+}
+
+#corgiFetch {
+  background-image: url("../images/iphone.png");
+}
+
+#tjdesigns {
+  background-image: url("../images/tandjdesigns.png");
 }
 
 #about {
@@ -142,6 +165,7 @@ ul.inlineList {
     display: inline;
   }
 }
+
 .socialIcons a {
   color: $primaryColor;
   text-decoration: none;
@@ -149,6 +173,5 @@ ul.inlineList {
 }
 
 .socialIcons a:hover {
-    color: $primaryActionColor;
+  color: #999;
 }
-

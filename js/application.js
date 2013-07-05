@@ -28,8 +28,16 @@ $(function() {
 });
 
 $(document).ready(function() {  
-    $("a#pAF").click(function (e) {
+    $("#pAF").click(function (e) {
         e.preventDefault();
-        $("p#mainTitle").fadeToggle("slow", "linear");
+        $("#appfunnel").fadeToggle("slow", "linear");
+    });
+    $("#pCF").click(function (e) {
+        e.preventDefault();
+        $("#appfunnel").fadeToggle("slow", "linear");
+    });
+    $("#pTJD").click(function (e) {
+        e.preventDefault();
+        $("#appfunnel").fadeToggle("slow", "linear");
     });
 });
