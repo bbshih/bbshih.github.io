@@ -1,4 +1,4 @@
-
+@import '../components/css-modal/modal';
 @import 'bourbon/bourbon';
 // $visual-grid: true;
 // $visual-grid-color: grey;
@@ -19,12 +19,25 @@ $primaryActionColor: #385194;
 $primaryColor: #ffffff;
 $clearPlane:rgba(60, 100, 200, 0.3);
 
-$sectionHeight: 600px;
+$sectionHeight: 100%;
 
 body {
   margin: auto;
   font-family: $helvetica;
+  font-size: 18px;
   background-color: #070d0b;
+}
+
+a:link {
+  font-weight: bold;
+  color: lighten($primaryActionColor, 30%);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: #fff;
 }
 
 nav {
@@ -32,7 +45,7 @@ nav {
   background-color: #333;
   opacity: 0.9;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
 
   .nav {
     @include outer-container;
@@ -40,28 +53,26 @@ nav {
   }
 
   a:link {
-    font-size: 2em;
-    font-weight: bold;
     color: #fff;
+    font-size: 2em;
     text-transform: uppercase;
-    text-decoration: none;
   }
-  a:hover {
-    text-decoration: underline;
-  }
+
   a:visited {
     color: #fff;
   }
 
   #navPortfolio {
-    @include span-columns(4);
+    @include span-columns(3);
   }
-
+  #navResume {
+    @include span-columns(3);
+  }
   #navAbout {
-    @include span-columns(4);
+    @include span-columns(3);
   }
   #navBlog {
-    @include span-columns(4);
+    @include span-columns(3);
   }
 }
 
@@ -123,6 +134,13 @@ nav {
     border: 1px solid #333;
     border-radius: 3px;
 
+    a {
+      display:block; 
+      width:100%; 
+      height:100%;
+      color: #000;
+    }
+
     .text {
       position: absolute;
       bottom: 0;
@@ -130,6 +148,11 @@ nav {
       width: 100%;
       padding: 5px;
     }
+  }
+
+  .modal {
+    @extend %modal;
+  
   }
 }
 
@@ -145,6 +168,11 @@ nav {
   background-image: url("../images/tandjdesigns.png");
 }
 
+#resume {
+  background-color: #58b49c;
+  color: $primaryColor;
+}
+
 #about {
   background-color: #5f2490;
   color: $primaryColor;
@@ -155,6 +183,10 @@ nav {
   width: 50%;
   margin: 0 auto;
   vertical-align: middle;
+}
+
+a.button {
+  @include button($primaryActionColor);
 }
 
 ul.inlineList {

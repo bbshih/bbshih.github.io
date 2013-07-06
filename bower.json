@@ -1,0 +1,7 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "dependencies": {
+    "css-modal": "~1.0.4"
+  }
+}

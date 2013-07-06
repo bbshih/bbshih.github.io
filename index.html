@@ -2,10 +2,11 @@
 <html>
 <head>
   <title>Billy Shih</title>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.2.0/base-min.css&pure/0.2.0/buttons-min.css&pure/0.2.0/menus-min.css">
+  <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.2.0/base-min.css&pure/0.2.0/buttons-min.css&pure/0.2.0/menus-min.css"> -->
  <link rel="stylesheet" href="css/application.css">
  <script type="text/javascript" src="components/jquery/jquery.js"></script>
- <script type="text/javascript" src="js/application.js"></script>
+ <script type="text/javascript" src="components/css-modal/modal.js"></script>
+ <script src="js/application.js" type="text/javascript" charset="utf-8" async defer></script>
 
 
 </head>
@@ -14,7 +15,9 @@
 
     <!-- <div class="circle"></div> -->
     <div class="text">
-    <h1>Billy Shih</h1>
+    <header>
+      <h1>Billy Shih</h1>
+    </header>
     <h2>Ruby on Rails <br> iOS Developer</h2>
       <div class="socialIcons">
         <a href="http://github.com/bbshih" class="hi-icon fontawesome-github"></a>
@@ -28,6 +31,7 @@
     <div class="nav">
       <ul class="inlineList">
         <li id="navPortfolio"><a href="#portfolio">Portfolio</a></li>
+        <li id="navResume"><a href="#resume">Resume</a></li>
         <li id="navAbout"><a href="#about">About</a></li>
         <li id="navBlog"><a href="#">Blog</a></li>
       </ul>
@@ -36,46 +40,129 @@
 
   <section id="portfolio">
     <div class="content">
-      <h1>Portfolio</h1>
+      <header>
+        <h1>Portfolio</h1>
+      </header>
       <ul class="inlineList">
         <li class="portfolioItem" id="appFunnel">
-          <div class="text">
-            <h2>App Funnel</h2>
-            <ul class="tags inlineList">
-              <li>Ruby on Rails</li>
-              <li>HTML</li>
-              <li>CSS (Bootstrap)</li>
-            </ul>
-          </div>
+          <a href="#appfunnel-modal">
+            <div class="text">
+              <h2>App Funnel</h2>
+              <ul class="tags inlineList">
+                <li>Ruby on Rails</li>
+                <li>HTML</li>
+                <li>CSS (Bootstrap)</li>
+              </ul>
+            </div>
+          </a>
         </li>
+      
         <li class="portfolioItem" id="corgiFetch">
-          <div class="text">
-            <h2>Corgi Fetch</h2>
-            <ul class="tags inlineList">
-              <li>iOS Mobile</li>
-              <li>Objective-C</li>
-              <li>APIs</li>
-            </ul>
-          </div>
+          <a href="#corgifetch-modal">
+            <div class="text">
+              <h2>Corgi Fetch</h2>
+              <ul class="tags inlineList">
+                <li>iOS Mobile</li>
+                <li>Objective-C</li>
+                <li>APIs</li>
+              </ul>
+            </div>
+          </a>
         </li>
         <li class="portfolioItem" id="tjdesigns">
-          <div class="text">
-            <h2>t+j designs</h2>
-            <ul class="tags inlineList">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
+          <a href="#tjdesigns-modal">
+            <div class="text">
+              <h2>t+j designs</h2>
+              <ul class="tags inlineList">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </a>
         </li>
       </ul>
+      <section class="modal" id="appfunnel-modal" tabindex="-1"
+              role="dialog" aria-labelledby="appfunnel-modal" aria-hidden="true">
+
+          <div class="modal-inner">
+              <header id="modal-label"><h2>AppFunnel</h2></header>
+              <div class="modal-content">
+                <a href="http://github.com/bbshih/AppFunnel" class="button"><img src="images/appfunnel.png"></a>
+                <p>Ruby on Rails application to manage the Code Fellows developer bootcamp application process. Prospective students apply through the website and Code Fellows staff can then review, rank and filter the applicants.</p>
+
+                <p>Top candidates can then be invited via email to send in a video interview and then invited into an in-person interview.</p>
+                <p><strong>Technical skills:</strong> Ruby on Rails (Devise, email, omniauth, forms), RSpec, Git, HTML, CSS (Twitter Bootstrap), Heroku, Pair Programming</p>
+              <p><a href="http://github.com/bbshih/AppFunnel" class="button">GitHub Repo</a> <a href="https://appfunnel.herokuapp.com/" class="button">Demo on Heroku</a> (Login with: admin@admin.com/password)</p>
+              </div>
+          </div>
+
+          <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">×</a>
+      </section>
+      <section class="modal" id="corgifetch-modal" tabindex="-1"
+              role="dialog" aria-labelledby="corgifetch-modal" aria-hidden="true">
+
+          <div class="modal-inner">
+              <header id="modal-label"><h2>Corgi Fetch</h2></header>
+              <div class="modal-content">
+                <a href="http://bit.ly/GetCorgiFetch"><img src="images/iphone.png"></a>
+                <p>iPhone application that pulls corgi photos from Instagram and videos from YouTube. Users can favorite photos to create a collection of photos and also can share photos out to social media.</p>
+
+                <p>Top ranked/rated corgi app with over 30 reviews:</p>
+
+                <blockquote>"As a fellow corgi lover I can't even begin to say how much I LOVE this app. Everyday it puts a huge smile on my face! Excellent."<br>- Kate Archer (5 Stars)</blockquote>
+
+                <p><strong>Technical skills:</strong> Cocoa Touch, Objective-C, UITableViews, In-App Purchases, Instagram API, Feed Parsing, Photoshop, Illustrator</p>
+              <p><a href="http://bit.ly/GetCorgiFetch" class="button">Download from App Store</a>
+              </div>
+          </div>
+
+          <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">×</a>
+      </section>
+      <section class="modal" id="tjdesigns-modal" tabindex="-1"
+              role="dialog" aria-labelledby="tjdesigns-modal" aria-hidden="true">
+
+          <div class="modal-inner">
+              <header id="modal-label"><h2>t+j Designs</h2></header>
+              <div class="modal-content">
+                <a href="http://tandjdesigns.com"><img src="images/tandjdesigns.png"></a>
+                <p>I co-founded t+j designs, an ecommerce fashion jewelry website, and in less than 2 years it has reached over $350,000 in revenue and been featured on TV (The Today Show, Access Hollywood, E! News) and print (New York Post, Seventeen).
+                <p>The website built on top of BigCommerce and I designed and heavily customized the theme in HTML/CSS based on existing theme. I also added some JavaScript hacks to get around limitations in BigCommerce, including the first visit sign-up modal and highlighting of sale prices and items.</p>
+
+                <p><strong>Technical skills:</strong> HTML, CSS, JavaScript, BigCommerce, MailChimp</p>
+              <p><a href="http://tandjdesigns.com" class="button">View Site</a></p>
+              </div>
+          </div>
+
+          <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">×</a>
+      </section>
+    </section>
+    <section id="resume">
+      <div class="content">
+        <header>
+          <h1>Resume</h1>
+          <p>I just graduated from <a href="http://www.codefellows.org">Code Fellows</a> Ruby on Rails bootcamp and am searching for the right job combining my interests and passion to learn. I spent all of 2012 learning iOS development, releasing <a href="http://bit.ly/GetCorgiFetch">Corgi Fetch</a> to the App Store.</p>
+
+          <p>I have a strong entreprenurial background, co-founding <a href="http://tandjdesigns.com">t+j designs</a>, a rapidly growing fashion jewelry brand, and <a href="http://sea.philanthroproductions.org">Philanthro Seattle</a>, the local chapter of a non-profit dedicated to getting young professionals involved in philanthropy. Professionally, I worked at 2 start-ups (Widemile, acquired by Webtrends, and Realself) doing online marketing and product development.</p>
+          <p><a href="http://www.linkedin.com/in/bshih" class="button">LinkedIn</a> <a href="mailto:me@billyshih.com" class="button">Email Me</a></p>
+        </header>
+
+      </div>
     </section>
     <section id="about">
       <div class="content">
-        <h1>About</h1>
-    </div>
-  </div>
-  </section>
+        <header>
+          <h1>About Me</h1>
+        </header>
+        <p>I'm a values driven person, trying to optimize for happiness others and myself.</p>
+
+        <p>Definitely idealistic, I hope each day to have a positive impact on the world through my work, relationships and every day choices.</p>
+
+        <p>I'm also a practicioner of <a href="http://www.dhamma.org">Vipassana meditation</a>, read as much as I can, enjoy listening to EDM and am <a href="http://en.wikipedia.org/wiki/Veganism">vegan</a>.</p>
+        
+        
+      </div>
+    </section>
 </body>
 </html>
 

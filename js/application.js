@@ -13,7 +13,7 @@ function moveScroller() {
         } else {
             if(st <= ot) {
                 s.css({
-                    position: "relative",
+                    position: "relative"
                 });
                 $("#portfolio").css("margin-top", 0);
             }
@@ -25,19 +25,4 @@ function moveScroller() {
 
 $(function() {
   moveScroller();
-});
-
-$(document).ready(function() {  
-    $("#pAF").click(function (e) {
-        e.preventDefault();
-        $("#appfunnel").fadeToggle("slow", "linear");
-    });
-    $("#pCF").click(function (e) {
-        e.preventDefault();
-        $("#appfunnel").fadeToggle("slow", "linear");
-    });
-    $("#pTJD").click(function (e) {
-        e.preventDefault();
-        $("#appfunnel").fadeToggle("slow", "linear");
-    });
 });
