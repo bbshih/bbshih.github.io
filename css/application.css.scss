@@ -1,9 +1,9 @@
 @import '../components/css-modal/modal';
 @import 'bourbon/bourbon';
-// $visual-grid: true;
-// $visual-grid-color: grey;
-// $visual-grid-index: front;
-// $visual-grid-opacity: 0.1;
+$visual-grid: true;
+$visual-grid-color: grey;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
 
 @import 'neat/neat';
 
@@ -16,8 +16,10 @@
 }
 
 $primaryActionColor: #385194;
-$primaryColor: #ffffff;
-$clearPlane:rgba(60, 100, 200, 0.3);
+$primaryBrightColor: #ffffff;
+$primaryDarkColor: #000000;
+$clearPlane:rgba(51, 51, 51, 0.9);
+// $clearPlane:rgba(60, 100, 200, 0.8);
 
 $sectionHeight: 100%;
 
@@ -29,15 +31,14 @@ body {
 }
 
 a:link {
+  color: $primaryDarkColor;
   font-weight: bold;
-  color: lighten($primaryActionColor, 30%);
-  text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:visited {
-  color: #fff;
+  color: $primaryDarkColor;
 }
 
 nav {
@@ -53,13 +54,18 @@ nav {
   }
 
   a:link {
-    color: #fff;
+    color: $primaryBrightColor;
     font-size: 2em;
     text-transform: uppercase;
+    text-decoration: none;
   }
 
   a:visited {
-    color: #fff;
+    color: $primaryBrightColor;
+  }
+
+  a:hover {
+    color: #ddd;
   }
 
   #navPortfolio {
@@ -94,14 +100,14 @@ nav {
 #intro {
   height: 800px;
   position: relative;
-  text-shadow: 0px 3px 3px #333;
+  text-shadow: 0px 2px 2px #333;
 
-  background-color: #000000;
+  background-color: $primaryDarkColor;
   background-image: url("../images/seattle3.jpg");
   background-repeat:no-repeat;   
   background-position:50% 50%;
   background-size: cover;
-  color: #fff;
+  color: $primaryBrightColor;
   text-align: right;
 
   .text {
@@ -113,47 +119,60 @@ nav {
     border-radius: 3px;
     padding: 20px;
   }
-
 }
 
 #portfolio {
 
-  background-color: #ffffff;
-  li.portfolioItem {
+  background-color: $primaryBrightColor;
+
+  .side {
     @include span-columns(4);
-    @include omega(3n);
-    height: 150px;
-    
-    color: #000;
-    text-shadow: 0px 2px 1px #fff;
+  }
 
-    background-color: #333;
-    background-repeat:no-repeat;
-    background-size: cover;
-    position: relative;
-    border: 1px solid #333;
-    border-radius: 3px;
+  .main {
+    @include span-columns(8);
+    margin-right: 0px; // Not sure why this is necessary, it shouldn't be adding a margin-right
+    li.portfolioItem {
+      @include span-columns(4 of 8);
+      @include omega(2n);
+      height: 150px;
+      $portfolioItemMargin: 25px;
+      margin-top: $portfolioItemMargin;
+      margin-bottom:$portfolioItemMargin;
+      
+      text-shadow: 0px 1px 1px $primaryDarkColor;
 
-    a {
-      display:block; 
-      width:100%; 
-      height:100%;
-      color: #000;
-    }
+      background-color: $primaryBrightColor;
+      background-repeat:no-repeat;
+      background-size: cover;
+      position: relative;
+      border: 1px solid #333;
+      border-radius: 3px;
 
-    .text {
-      position: absolute;
-      bottom: 0;
-      background-color: darken($clearPlane, 20%);
-      width: 100%;
-      padding: 5px;
+      a {
+        display:block; 
+        width:100%; 
+        height:100%;
+        color: $primaryBrightColor;
+      }
+
+      .text {
+        position: absolute;
+        bottom: 0;
+        background-color: $clearPlane;
+        width: 100%;
+        padding: 5px;
+      }
     }
   }
+
+  
 
   .modal {
     @extend %modal;
   
   }
+
 }
 
 #appFunnel {
@@ -168,14 +187,19 @@ nav {
   background-image: url("../images/tandjdesigns.png");
 }
 
+#thissite {
+  background-image: url("../images/seattle3.jpg");
+  background-position: 50% 50%;
+}
+
 #resume {
-  background-color: #58b49c;
-  color: $primaryColor;
+  background-color: $primaryBrightColor;
+  // background-color: #58b49c;
 }
 
 #about {
-  background-color: #5f2490;
-  color: $primaryColor;
+  // background-color: #5f2490;
+  background-color: $primaryBrightColor;
 }
 
 // Useful
@@ -199,7 +223,7 @@ ul.inlineList {
 }
 
 .socialIcons a {
-  color: $primaryColor;
+  color: $primaryBrightColor;
   text-decoration: none;
   margin: 0 10px 0 0;
 }
