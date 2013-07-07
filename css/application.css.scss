@@ -1,9 +1,9 @@
 @import '../components/css-modal/modal';
 @import 'bourbon/bourbon';
-$visual-grid: true;
-$visual-grid-color: grey;
-$visual-grid-index: front;
-$visual-grid-opacity: 0.1;
+// $visual-grid: true;
+// $visual-grid-color: grey;
+// $visual-grid-index: front;
+// $visual-grid-opacity: 0.1;
 
 @import 'neat/neat';
 
@@ -18,10 +18,14 @@ $visual-grid-opacity: 0.1;
 $primaryActionColor: #385194;
 $primaryBrightColor: #ffffff;
 $primaryDarkColor: #000000;
+
+$darkGray: #333;
+$lightGray: #ddd;
+
 $clearPlane:rgba(51, 51, 51, 0.9);
 // $clearPlane:rgba(60, 100, 200, 0.8);
 
-$sectionHeight: 100%;
+$sectionHeight: 500px;
 
 body {
   margin: auto;
@@ -43,7 +47,7 @@ a:visited {
 
 nav {
   padding: 5px 0;
-  background-color: #333;
+  background-color: $darkGray;
   opacity: 0.9;
   width: 100%;
   z-index: 100;
@@ -65,7 +69,7 @@ nav {
   }
 
   a:hover {
-    color: #ddd;
+    color: $darkGray;
   }
 
   #navPortfolio {
@@ -84,7 +88,8 @@ nav {
 
 .content {
   @include outer-container;
-  height: $sectionHeight;
+  height: 100%;
+  min-height: $sectionHeight;
 
   h1 {
     font-size: 5em;
@@ -100,7 +105,7 @@ nav {
 #intro {
   height: 800px;
   position: relative;
-  text-shadow: 0px 2px 2px #333;
+  text-shadow: 0px 2px 2px $darkGray;
 
   background-color: $primaryDarkColor;
   background-image: url("../images/seattle3.jpg");
@@ -146,7 +151,7 @@ nav {
       background-repeat:no-repeat;
       background-size: cover;
       position: relative;
-      border: 1px solid #333;
+      border: 1px solid $darkGray;
       border-radius: 3px;
 
       a {
@@ -207,6 +212,10 @@ nav {
   width: 50%;
   margin: 0 auto;
   vertical-align: middle;
+}
+
+.bottomBorder {
+  border-bottom: 1px solid $lightGray;
 }
 
 a.button {
