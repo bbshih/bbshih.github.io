@@ -17,10 +17,14 @@
 
 $primaryActionColor: #385194;
 $primaryBrightColor: #ffffff;
-$primaryDarkColor: #000000;
+$primaryDarkColor: #494949;
+$black: #191919;
 
 $darkGray: #333;
 $lightGray: #ddd;
+
+$borderRadius: 3px;
+
 
 $clearPlane:rgba(51, 51, 51, 0.9);
 // $clearPlane:rgba(60, 100, 200, 0.8);
@@ -32,6 +36,7 @@ body {
   font-family: $helvetica;
   font-size: 18px;
   background-color: #070d0b;
+  color: $black;
 }
 
 a:link {
@@ -90,6 +95,7 @@ nav {
   @include outer-container;
   height: 100%;
   min-height: $sectionHeight;
+  padding: 25px 0;
 
   h1 {
     font-size: 5em;
@@ -97,32 +103,28 @@ nav {
   } 
 
   h2 {
-    font-size: 3em;
+    font-size: 2em;
     margin: 0px;
   }
 }
 
 #intro {
-  height: 800px;
-  position: relative;
+  padding: 20px;
   text-shadow: 0px 2px 2px $darkGray;
 
   background-color: $primaryDarkColor;
-  background-image: url("../images/seattle3.jpg");
-  background-repeat:no-repeat;   
-  background-position:50% 50%;
-  background-size: cover;
+  // background-image: url("../images/seattle3.jpg");
+  // background-repeat:no-repeat;   
+  // background-position:50% 50%;
+  // background-size: cover;
   color: $primaryBrightColor;
-  text-align: right;
+  // text-align: center;
 
-  .text {
-    position: absolute; 
-    bottom: 10px;
-    right: 10px;
-    text-align: right;
-    background-color: $clearPlane;
-    border-radius: 3px;
-    padding: 20px;
+  h2, a:link, a:visited {
+    color: $lightGray;
+  }
+  .content {
+    min-height: 0;
   }
 }
 
@@ -130,44 +132,37 @@ nav {
 
   background-color: $primaryBrightColor;
 
-  .side {
-    @include span-columns(4);
-  }
 
-  .main {
-    @include span-columns(8);
-    margin-right: 0px; // Not sure why this is necessary, it shouldn't be adding a margin-right
-    li.portfolioItem {
-      @include span-columns(4 of 8);
-      @include omega(2n);
-      height: 150px;
-      $portfolioItemMargin: 25px;
-      margin-top: $portfolioItemMargin;
-      margin-bottom:$portfolioItemMargin;
-      
-      text-shadow: 0px 1px 1px $primaryDarkColor;
+  li.portfolioItem {
+    @include span-columns(6);
+    @include omega(2n);
+    height: 350px;
+    $portfolioItemMargin: 25px;
+    margin-top: $portfolioItemMargin;
+    margin-bottom:$portfolioItemMargin;
+    
+    text-shadow: 0px 1px 1px $primaryDarkColor;
 
-      background-color: $primaryBrightColor;
-      background-repeat:no-repeat;
-      background-size: cover;
-      position: relative;
-      border: 1px solid $darkGray;
-      border-radius: 3px;
+    background-color: $primaryBrightColor;
+    background-repeat:no-repeat;
+    background-size: cover;
+    position: relative;
+    border: 1px solid $darkGray;
+    border-radius: $borderRadius;
 
-      a {
-        display:block; 
-        width:100%; 
-        height:100%;
-        color: $primaryBrightColor;
-      }
+    a {
+      display:block; 
+      width:100%; 
+      height:100%;
+      color: $primaryBrightColor;
+    }
 
-      .text {
-        position: absolute;
-        bottom: 0;
-        background-color: $clearPlane;
-        width: 100%;
-        padding: 5px;
-      }
+    .text {
+      position: absolute;
+      bottom: 0;
+      background-color: $clearPlane;
+      width: 100%;
+      padding: 5px;
     }
   }
 
@@ -214,13 +209,30 @@ nav {
   vertical-align: middle;
 }
 
-.bottomBorder {
-  border-bottom: 1px solid $lightGray;
+a.button {
+  // @include button($primaryActionColor);
+  padding: .5em 1em;
+  background-color:$darkGray;
+  color: $primaryBrightColor;
+  font-weight: normal;
+  text-decoration: none;
+  border-radius: $borderRadius;  
 }
 
-a.button {
-  @include button($primaryActionColor);
-}
+.pure-button{display:inline-block;
+  *display:inline;
+  zoom:1;
+  line-height:normal;
+  white-space:nowrap;
+  vertical-align:baseline;
+  text-align:center;
+  cursor:pointer;
+  -webkit-user-drag:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none}
+  .pure-button-primary,.pure-button-selected,a.pure-button-primary,a.pure-button-selected{background-color:#0078e7;color:#fff}
 
 ul.inlineList {
   margin: 0;
