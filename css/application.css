@@ -229,10 +229,11 @@ body {
   color: #000; }
 
 a:link {
-  color: #60bee6; }
+  color: #60bee6;
+  text-decoration: none; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 a:visited {
   color: #60bee6; }
@@ -319,12 +320,15 @@ nav {
 
 #intro {
   padding: 20px;
+  text-shadow: 0px 2px 2px #333333;
   background-color: #494949;
-  background-image: url("../images/desk.jpg");
+  background-image: url("../images/bg3.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: 50% 100%;
+  background-size: 1000px;
   color: white; }
+  #intro .content {
+    min-height: 100%; }
   #intro h1 {
     color: #fff; }
   #intro p, #intro a:link, #intro a:visited {
@@ -364,6 +368,8 @@ nav {
 #recommend {
   background-color: #b8e2f4;
   border-radius: 3px; }
+  #recommend a:link, #recommend a:visited {
+    color: #34acdf; }
 
 footer {
   background-color: #494949; }
