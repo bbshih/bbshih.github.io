@@ -237,13 +237,15 @@ a:hover {
 a:visited {
   color: #60bee6; }
 
-h1, h2 {
+h1, h2, .title {
   font-family: 'PT Sans', serif;
   color: #494949; }
 
 nav {
-  padding: 15px 0;
+  height: 80px;
+  line-height: 80px;
   background-color: #333333;
+  font-size: 2em;
   opacity: 0.9;
   width: 100%;
   z-index: 100; }
@@ -251,50 +253,33 @@ nav {
     *zoom: 1;
     max-width: 960px;
     margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
+    margin-right: auto; }
     nav .nav:before, nav .nav:after {
       content: " ";
       display: table; }
     nav .nav:after {
       clear: both; }
+    nav .nav .title {
+      color: #dfdfdf; }
+    nav .nav ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: justify; }
+    nav .nav ul:after {
+      content: "";
+      width: 100%;
+      display: inline-block; }
+    nav .nav li {
+      display: inline; }
   nav a:link {
     color: white;
-    font-size: 2em;
     text-transform: uppercase;
     text-decoration: none; }
   nav a:visited {
     color: white; }
   nav a:hover {
     text-decoration: underline; }
-  nav #navPortfolio {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    nav #navPortfolio:last-child {
-      margin-right: 0; }
-  nav #navResume {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    nav #navResume:last-child {
-      margin-right: 0; }
-  nav #navAbout {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    nav #navAbout:last-child {
-      margin-right: 0; }
-  nav #navBlog {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    nav #navBlog:last-child {
-      margin-right: 0; }
 
 .content {
   *zoom: 1;
@@ -303,7 +288,7 @@ nav {
   margin-right: auto;
   height: 100%;
   min-height: 500px;
-  padding: 25px 0;
+  padding: 100px 0;
   color: #191919; }
   .content:before, .content:after {
     content: " ";
@@ -331,7 +316,7 @@ nav {
   #intro h1 {
     color: #fff; }
   #intro p, #intro a:link, #intro a:visited {
-    color: #dddddd;
+    color: #dfdfdf;
     margin: 25px 0; }
   #intro a:hover {
     color: white; }
@@ -353,9 +338,24 @@ nav {
     clear: left; }
   #portfolio li.portfolioItem h2 {
     color: #60bee6; }
-#portfolio div.iphone {
-  border: 1px #b6b6b6 solid;
-  border-radius: 3px; }
+  #portfolio li.portfolioItem ul.tags {
+    display: block; }
+    #portfolio li.portfolioItem ul.tags li {
+      color: #a097db; }
+#portfolio #corgiFetchIphone {
+  border: 1px #787878 solid;
+  border-radius: 6px;
+  margin: 0;
+  padding: 20px 0 0 0;
+  width: 470px;
+  height: 303px;
+  text-align: center;
+  background-image: url("../images/ccorgifetch.png");
+  background-repeat: no-repeat;
+  background-position: 50% 22px;
+  background-size: contain;
+  background-color: #dfdfdf;
+  color: lightgrey; }
 
 #resumeMain, #recommend {
   display: block;
@@ -393,9 +393,7 @@ a.button {
   border-radius: 3px; }
 
 ul.inlineList {
-  margin: 0;
-  padding: 0;
-  display: inline; }
+  list-style-type: none; }
   ul.inlineList li {
     display: inline; }
 
@@ -405,4 +403,4 @@ ul.inlineList {
   margin: 0 10px 0 0; }
 
 .socialIcons a:hover {
-  color: #60bee6; }
+  color: #dfdfdf; }
