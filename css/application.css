@@ -223,8 +223,7 @@ html {
 
 body {
   margin: auto;
-  font-family: Lato, sans-serif;
-  font-size: 18px;
+  font: 18px/1.2 Lato, sans-serif;
   background-color: white;
   color: #000; }
 
@@ -322,10 +321,10 @@ nav {
   padding: 20px;
   text-shadow: 0px 2px 2px #333333;
   background-color: #494949;
-  background-image: url("../images/bg3.jpg");
+  background-image: url("../images/background2.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 100%;
-  background-size: 1000px;
+  background-position: 50% 50%;
+  background-size: cover;
   color: white; }
   #intro .content {
     min-height: 100%; }
@@ -333,7 +332,7 @@ nav {
     color: #fff; }
   #intro p, #intro a:link, #intro a:visited {
     color: #dddddd;
-    margin-top: 25px; }
+    margin: 25px 0; }
   #intro a:hover {
     color: white; }
   #intro .subtitle {
@@ -354,8 +353,9 @@ nav {
     clear: left; }
   #portfolio li.portfolioItem h2 {
     color: #60bee6; }
-  #portfolio li.portfolioItem img {
-    height: 300px; }
+#portfolio div.iphone {
+  border: 1px #b6b6b6 solid;
+  border-radius: 3px; }
 
 #resumeMain, #recommend {
   display: block;
