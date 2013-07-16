@@ -1,3 +1,4 @@
+@import 'normalize.css';
 @import '../components/css-modal/modal';
 @import 'bourbon/bourbon';
 // $visual-grid: true;
@@ -7,24 +8,26 @@
 
 @import 'neat/neat';
 
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|PT+Sans);
-
-/* fontawesome */
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-  font-size: 3em;
-}
 
 $max-width: 960px;
 
-$primaryActionColor: #60bee6;
-$secondaryActionColor: #a097db;
+$primaryActionColor: #60bee6; 
+$secondaryActionColor: #a097db; 
 $primaryBrightColor: #ffffff;
 $primaryDarkColor: #494949;
 $black: #191919;
 $darkGray: #333333;
 $lightGray: #dfdfdf;
+
+$primaryActionColor: #e86f59;
+$secondaryActionColor: #9c9f90; 
+$primaryBrightColor: #ffffff;
+$primaryDarkColor: #494949;
+$black: #4d4b4a;
+$darkGray: #595452;
+$lightGray: #b9b7aa;
 
 $borderRadius: 3px;
 
@@ -32,12 +35,13 @@ $borderRadius: 3px;
 $clearPlane:rgba(51, 51, 51, 0.9);
 
 $sectionHeight: 500px;
+$spacing: 20px;
 
 body {
   margin: auto;
   font: 18px/1.2 Lato, sans-serif;
   background-color: $primaryBrightColor;
-  color: #000;
+  color: $black;
 }
 
 a:link {
@@ -51,9 +55,14 @@ a:visited {
   color: $primaryActionColor;
 }
 
-h1, h2, .title {
+h1, h2, #navTitle {
   font-family: 'PT Sans', serif;
   color: $primaryDarkColor;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 $spacing 0;
 }
 
 nav {
@@ -67,8 +76,16 @@ nav {
   
   .nav {
     @include outer-container;
-    .title {
-      color: $lightGray;
+    #navTitle {
+      @include span-columns ( 3 );
+      a:link, a:visited {
+        color: $lightGray;
+        text-transform: none;
+      }
+    }
+
+    .adjustNav {
+      @include span-columns ( 9 ) 
     }
     
     ul {
@@ -125,7 +142,7 @@ nav {
 }
 
 #intro {
-  padding: 20px;
+  padding: $spacing;
   text-shadow: 0px 2px 2px $darkGray;
   
   background-color: $primaryDarkColor;
@@ -164,13 +181,15 @@ nav {
 
     h2 {
       color: $primaryActionColor;
+      margin: $spacing 0 $spacing/4 0;
     }
 
     ul.tags {
-      
       display:block;
+      margin: 0 0 $spacing/2 0;
       li {
         color: $secondaryActionColor;
+        margin-right: $spacing; 
       }
     }
   }
@@ -178,7 +197,7 @@ nav {
     border: 1px #787878 solid;
     border-radius: 6px;
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: $spacing 0 0 0;
     width: 470px;
     height: 303px;
     text-align: center;
@@ -196,16 +215,13 @@ nav {
   
 }
 
-
-#resume {
-}
-
 #resumeMain, #recommend {
   @include span-columns (6);
 }
 
 #recommend {
-  background-color: lighten($primaryActionColor, 20%);
+  // background-color: #c3c5bf;
+  border: 1px $lightGray solid;
   border-radius: $borderRadius;
   a:link, a:visited { color:darken($primaryActionColor, 10%);}
 }
@@ -232,16 +248,22 @@ footer .content {
 }
 
 a.button {
+  display: inline-block;
+  margin: 0 $spacing $spacing 0;
   padding: .5em 1em;
   background-color:$primaryActionColor;
-  color: $primaryDarkColor;
-  font-weight: normal;
+  color: $primaryBrightColor;
   text-decoration: none;
-  border-radius: $borderRadius;  
+  border-radius: $borderRadius;
+}
+
+a.button:hover {
+    background-color:darken($primaryActionColor, 10%)
 }
 
 ul.inlineList {
   list-style-type: none;
+  padding: 0;
   li {
     display: inline;
   }

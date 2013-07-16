@@ -1,4 +1,5 @@
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(normalize.css);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|PT+Sans);
 /**
  * CSS Modal
@@ -216,35 +217,34 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* fontawesome */
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-  font-size: 3em; }
-
 body {
   margin: auto;
   font: 18px/1.2 Lato, sans-serif;
   background-color: white;
-  color: #000; }
+  color: #4d4b4a; }
 
 a:link {
-  color: #60bee6;
+  color: #e86f59;
   text-decoration: none; }
 
 a:hover {
   text-decoration: underline; }
 
 a:visited {
-  color: #60bee6; }
+  color: #e86f59; }
 
-h1, h2, .title {
+h1, h2, #navTitle {
   font-family: 'PT Sans', serif;
-  color: #494949; }
+  color: #494949;
+  font-weight: normal; }
+
+p {
+  margin: 0 0 20px 0; }
 
 nav {
   height: 80px;
   line-height: 80px;
-  background-color: #333333;
+  background-color: #595452;
   font-size: 2em;
   opacity: 0.9;
   width: 100%;
@@ -259,8 +259,23 @@ nav {
       display: table; }
     nav .nav:after {
       clear: both; }
-    nav .nav .title {
-      color: #dfdfdf; }
+    nav .nav #navTitle {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      nav .nav #navTitle:last-child {
+        margin-right: 0; }
+      nav .nav #navTitle a:link, nav .nav #navTitle a:visited {
+        color: #b9b7aa;
+        text-transform: none; }
+    nav .nav .adjustNav {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      nav .nav .adjustNav:last-child {
+        margin-right: 0; }
     nav .nav ul {
       margin: 0;
       padding: 0;
@@ -289,7 +304,7 @@ nav {
   height: 100%;
   min-height: 500px;
   padding: 100px 0;
-  color: #191919; }
+  color: #4d4b4a; }
   .content:before, .content:after {
     content: " ";
     display: table; }
@@ -304,7 +319,7 @@ nav {
 
 #intro {
   padding: 20px;
-  text-shadow: 0px 2px 2px #333333;
+  text-shadow: 0px 2px 2px #595452;
   background-color: #494949;
   background-image: url("../images/background2.jpg");
   background-repeat: no-repeat;
@@ -316,7 +331,7 @@ nav {
   #intro h1 {
     color: #fff; }
   #intro p, #intro a:link, #intro a:visited {
-    color: #dfdfdf;
+    color: #b9b7aa;
     margin: 25px 0; }
   #intro a:hover {
     color: white; }
@@ -337,11 +352,14 @@ nav {
   #portfolio li.portfolioItem:nth-child(2n+1) {
     clear: left; }
   #portfolio li.portfolioItem h2 {
-    color: #60bee6; }
+    color: #e86f59;
+    margin: 20px 0 5px 0; }
   #portfolio li.portfolioItem ul.tags {
-    display: block; }
+    display: block;
+    margin: 0 0 10px 0; }
     #portfolio li.portfolioItem ul.tags li {
-      color: #a097db; }
+      color: #9c9f90;
+      margin-right: 20px; }
 #portfolio #corgiFetchIphone {
   border: 1px #787878 solid;
   border-radius: 6px;
@@ -354,7 +372,7 @@ nav {
   background-repeat: no-repeat;
   background-position: 50% 22px;
   background-size: contain;
-  background-color: #dfdfdf;
+  background-color: #b9b7aa;
   color: lightgrey; }
 
 #resumeMain, #recommend {
@@ -366,10 +384,10 @@ nav {
     margin-right: 0; }
 
 #recommend {
-  background-color: #b8e2f4;
+  border: 1px #b9b7aa solid;
   border-radius: 3px; }
   #recommend a:link, #recommend a:visited {
-    color: #34acdf; }
+    color: #e2482c; }
 
 footer {
   background-color: #494949; }
@@ -385,15 +403,20 @@ footer .content {
   vertical-align: middle; }
 
 a.button {
+  display: inline-block;
+  margin: 0 20px 20px 0;
   padding: .5em 1em;
-  background-color: #60bee6;
-  color: #494949;
-  font-weight: normal;
+  background-color: #e86f59;
+  color: white;
   text-decoration: none;
   border-radius: 3px; }
 
+a.button:hover {
+  background-color: #e2482c; }
+
 ul.inlineList {
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0; }
   ul.inlineList li {
     display: inline; }
 
@@ -403,4 +426,4 @@ ul.inlineList {
   margin: 0 10px 0 0; }
 
 .socialIcons a:hover {
-  color: #dfdfdf; }
+  color: #b9b7aa; }

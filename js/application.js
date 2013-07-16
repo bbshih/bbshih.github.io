@@ -14,7 +14,8 @@ function moveScroller() {
             $("#portfolio").css("margin-top", navHeight);
             // $("li.first").css("margin-left", "10px");
             if(!billyExist) {
-                $("div.nav ul").prepend("<li class='title'>Billy Shih</li>");
+                $("div.nav").add("div#adjustNav");
+                $("div.nav").prepend("<span id='navTitle'><a href='#intro'>Billy Shih</a></span>");
                 billyExist = true;
             }
         } else {
@@ -25,7 +26,7 @@ function moveScroller() {
                 $("#portfolio").css("margin-top", 0);
                 // $("li.first").css("margin-left", 0);
                 if(billyExist) {
-                    $("div.nav li.title").remove();
+                    $("#navTitle").remove();
                     billyExist = false;
                 }    
             }
