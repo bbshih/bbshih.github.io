@@ -211,6 +211,15 @@ nav {
 
   .modal {
     @extend %modal;
+    img, #corgiFetchIphone {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: $spacing;
+    }
+    .buttons {
+      text-align: center;
+    }
   }
   
 }
@@ -232,12 +241,14 @@ nav {
 
 footer {
   background-color: $primaryDarkColor;
+
+  .content {
+    min-height: 0;
+    color: #fff;
+    padding: $spacing 0;
+  }
 }
-footer .content {
-  min-height: 0;
-  height: 100%;
-  color: #fff;
-}
+
 
 
 // Useful
