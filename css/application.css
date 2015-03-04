@@ -1,6 +1,4 @@
 @import url(normalize.css);
-@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|PT+Sans);
 /**
  * CSS Modal
  * Modal as reusable module
@@ -17,6 +15,8 @@
 /*
  * Configuration
  */
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|PT+Sans);
 html {
   overflow-y: scroll; }
 
@@ -330,13 +330,16 @@ nav {
     min-height: 100%; }
   #intro h1 {
     color: #fff; }
-  #intro p, #intro a:link, #intro a:visited {
+  #intro a:link, #intro a:visited {
     color: #b9b7aa;
     margin: 25px 0; }
   #intro a:hover {
     color: white; }
   #intro .subtitle {
     font-size: 2em; }
+    #intro .subtitle ul {
+      list-style: none;
+      padding-left: 0; }
 
 #portfolio li.portfolioItem {
   display: block;
@@ -373,7 +376,7 @@ nav {
   background-position: 50% 22px;
   background-size: contain;
   background-color: #b9b7aa;
-  color: lightgrey; }
+  color: lightgray; }
 #portfolio .modal img, #portfolio .modal #corgiFetchIphone {
   display: block;
   margin-left: auto;
