@@ -121,10 +121,10 @@ gulp.task('wiredep', function () {
 /**
  * Push build to gh-pages
  */
-gulp.task('deploy', ['build'], function () {
-  return gulp.src("./dist/**/*")
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*')
     .pipe(deploy({
-      branch: "master"
+      branch: 'master'
     }));
 });
 
