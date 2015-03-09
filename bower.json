@@ -1,7 +1,8 @@
 {
   "name": "website",
-  "version": "0.0.0",
+  "private": true,
   "dependencies": {
-    "css-modal": "~1.0.4"
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1"
   }
 }
