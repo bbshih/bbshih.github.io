@@ -124,7 +124,8 @@ gulp.task('wiredep', function () {
 gulp.task('deploy', ['build'], function () {
   return gulp.src("./dist/**/*")
     .pipe(deploy({
-      remoteUrl: 'https://github.com/bbshih/bbshih.github.io.git'
+      remoteUrl: 'https://github.com/bbshih/bbshih.github.io.git',
+      branch: 'master'
     }));
 });
 
