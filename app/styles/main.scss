@@ -168,13 +168,16 @@ nav {
   }
 }
 
+.half-section {
+  @include span-columns(6);
+  @include media($mobile, 6) {
+    @include span-columns(6);
+  }
+}
+
 #portfolio {
   li.portfolioItem {
-    @include span-columns(6);
     @include omega(2n);
-    @include media($mobile, 6) {
-      @include span-columns(6);
-    }
 
     $portfolioItemMargin: 25px;
     margin-top: $portfolioItemMargin;
@@ -229,10 +232,6 @@ nav {
     }
   }
 
-}
-
-#resumeMain, #recommend {
-  @include span-columns (6);
 }
 
 #recommend {
