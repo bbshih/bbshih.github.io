@@ -1,27 +1,19 @@
 // bower:scss
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "bower_components/neat/app/assets/stylesheets/_neat.scss";
+@import "bower_components/css-modal/modal.scss";
 // endbower
 
-@import 'normalize.css';
-@import 'bourbon/bourbon';
 // $visual-grid: true;
 // $visual-grid-color: grey;
 // $visual-grid-index: front;
 // $visual-grid-opacity: 0.1;
 
-@import 'neat/neat';
-
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic|PT+Sans);
 
-$max-width: 960px;
-
-$primaryActionColor: #60bee6;
-$secondaryActionColor: #a097db;
-$primaryBrightColor: #ffffff;
-$primaryDarkColor: #494949;
-$black: #191919;
-$darkGray: #333333;
-$lightGray: #dfdfdf;
+$max-width: 980px;
+$mobile: new-breakpoint(max-width 500px 6);
 
 $primaryActionColor: #e86f59;
 $secondaryActionColor: #9c9f90;
@@ -32,7 +24,6 @@ $darkGray: #595452;
 $lightGray: #b9b7aa;
 
 $borderRadius: 3px;
-
 
 $clearPlane:rgba(51, 51, 51, 0.9);
 
@@ -128,7 +119,7 @@ nav {
   height: 100%;
   min-height: $sectionHeight;
 
-  padding: 100px 0;
+  padding: 100px $spacing/2;
 
   color: $black;
 
@@ -180,6 +171,9 @@ nav {
   li.portfolioItem {
     @include span-columns(6);
     @include omega(2n);
+    @include media($mobile, 6) {
+      @include span-columns(6);
+    }
 
     $portfolioItemMargin: 25px;
     margin-top: $portfolioItemMargin;
@@ -199,24 +193,30 @@ nav {
       }
     }
   }
-  #corgiFetchIphone {
+
+  .portfolioImage {
+    width: 100%;
+  }
+
+  .corgiFetchImage {
     border: 1px #787878 solid;
     border-radius: 6px;
-    margin: 0;
-    padding: $spacing 0 0 0;
-    width: 470px;
-    height: 303px;
-    text-align: center;
-    background-image: url("../images/ccorgifetch.png");
-    background-repeat:no-repeat;
-    background-position: 50% 22px;
-    background-size: contain;
-    background-color: $lightGray;
-    color: lightGray
+    max-width: 468px;
+    max-height: 301px;
   }
 
   .modal {
     @extend %modal;
+    &.is-active {
+      background-color:rgba(40,40,40,.5);
+    }
+    .modal-inner {
+      background-color: white;
+      padding: 0 10px;
+    }
+    .modal-close {
+
+    }
     img, #corgiFetchIphone {
       display: block;
       margin-left: auto;
