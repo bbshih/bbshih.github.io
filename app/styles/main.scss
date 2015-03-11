@@ -13,8 +13,9 @@
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic|PT+Sans);
 
-$max-width: 980px;
-$mobile: new-breakpoint(max-width 500px 6);
+$max-width: 1020px;
+$BPMedium: new-breakpoint(max-width 1000px 6);
+$BPMobile: new-breakpoint(max-width 500px 6);
 
 $primaryActionColor: #e86f59;
 $secondaryActionColor: #9c9f90;
@@ -64,13 +65,23 @@ nav {
   line-height: 80px;
   background-color: $darkGray;
   font-size: 2em;
+  @include media($BPMedium) {
+    font-size: 1em;
+    line-height: 50px;
+    height: 50px;
+  }
   opacity: 0.9;
   width: 100%;
   z-index: 100;
 
   .nav {
     @include outer-container;
+    padding: 0 $spacing;
+
     #navTitle {
+      @include media($BPMedium) {
+        display: none;
+      }
       @include span-columns ( 3 );
       a:link, a:visited {
         color: $lightGray;
@@ -120,14 +131,29 @@ nav {
   height: 100%;
   min-height: $sectionHeight;
 
-  padding: 100px $spacing/2;
+  padding: $spacing*5 $spacing;
+  &.last {
+    margin-top: $spacing*10; //Adds extra white space above footer so that last row isn't too low on the page
+  }
+  @include media($BPMedium) {
+    padding: $spacing*2 $spacing/2;
+    &.last {
+     margin-top: $spacing*2; //Adds extra white space above footer so that last row isn't too low on the page
+    }
+  }
+
 
   color: $black;
 
   h1 {
     font-size: 5em;
     margin: 0px;
+
+    @include media($BPMedium) {
+      font-size: 3em;
+    }
   }
+
 
   h2 {
     font-size: 2em;
@@ -168,11 +194,18 @@ nav {
   }
 }
 
+.half-section {
+  @include span-columns(6);
+  @include media($BPMobile) {
+    @include span-columns(6);
+  }
+}
+
 #portfolio {
   li.portfolioItem {
     @include span-columns(6);
     @include omega(2n);
-    @include media($mobile, 6) {
+    @include media($BPMobile, 6) {
       @include span-columns(6);
     }
 
@@ -252,7 +285,7 @@ footer {
   .content {
     min-height: 0;
     color: #fff;
-    padding: $spacing 0;
+    padding: $spacing $spacing/2;
   }
 }
 
@@ -279,7 +312,7 @@ a.button:hover {
     background-color:darken($primaryActionColor, 10%)
 }
 
-ul.inlineList {
+ul.inlineLi  {
   list-style-type: none;
   padding: 0;
   li {
