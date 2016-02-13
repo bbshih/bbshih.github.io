@@ -203,11 +203,11 @@ nav {
 
 #portfolio {
   li.portfolioItem {
-    @include span-columns(6);
     @include omega(2n);
     @include media($BPMobile, 6) {
       @include span-columns(6);
     }
+
 
     $portfolioItemMargin: 25px;
     margin-top: $portfolioItemMargin;
@@ -262,10 +262,6 @@ nav {
     }
   }
 
-}
-
-#resumeMain, #recommend {
-  @include span-columns (6);
 }
 
 #recommend {
